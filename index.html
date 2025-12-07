@@ -15,8 +15,8 @@
 
 
 
-    <div class="container-fluid">
-      <span>
+    <div class="container-fluid m-3 p-3 border border-3 rounded-3 border-dark">
+      <span class="text-center">
         <input type="text" name="" id="nome" placeholder="inserisci nome"/>
         <input type="text" name="" id="cognome" placeholder="inserisci cognome"/>
         <input type="number" name="" id="eta" placeholder="inserisci eta" min="1" max="100"/>
@@ -28,7 +28,16 @@
 
 
 
-      <table id="tabella">
+      <table id="tabella" class="text-center table table-striped table-hover m-3 p-3">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Età</th>
+            <th>Hobby</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
 
       </table>
     </div>

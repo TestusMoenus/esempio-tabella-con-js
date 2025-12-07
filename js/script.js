@@ -6,10 +6,10 @@ const tabella =document.getElementById ("tabella");
 const btnAggiungi =document.getElementById ("btn-inserisci");
 const rimuovi =document.getElementById ("btn-rimuovi");
 const cancellaTutto =document.getElementById ("btn-cancella-tutto");
-const persona = {
+let persona = {
     nome: "",
     cognome: "",
-    eta: "",
+    eta: 1,
     hobby: ""
 }; 
 let arr = [
@@ -29,33 +29,33 @@ function inizializzaTabella () {
 }
 function aggiornaTabella () {
     inizializzaTabella ();
-    for (const i in arr) {
-        for (const key in i) {
-            const riga = document.createElement ("tr");
-            for (const key in arr[i]) {
-                const cella = document.createElement ("td");
-                cella.innerText = arr[i][key];
-                riga.appendChild (cella);
-            }
-            tabella.appendChild (riga);
+
+    for (let i = 0; i < arr.length; i++) { 
+        const riga = document.createElement ("tr");
+        const personaCorrente = arr[i];
+
+
+        for (const key in personaCorrente) { 
+            const cella = document.createElement ("td");
+            cella.innerText = personaCorrente[key];
+            riga.appendChild (cella);
         }
+        tabella.appendChild (riga);
     }
-
-
 }
 
 function aggiungi () {
-    if (nome.value =="" || cognome.value =="" || eta.value =="" || hobby.value ==""    ) {
-        alert ("Compila tutti i campi");
+    if ((nome.value).trim() =="" || (cognome.value).trim() =="" || eta.value =="" || (hobby.value).trim() =="" || isNaN (Number(eta.value)) || Number(eta.value) <=0 ) {
+        alert ("Compila tutti i campi in modo adeguato");
         return;
     }
-    
-    const persona = {
-        nome: nome.value,
-        cognome: cognome.value,
-        eta: eta.value,
-        hobby: hobby.value
-    };  
+    persona = {
+        nome: (nome.value).trim(),
+        cognome: (cognome.value).trim(),
+        eta: Number(eta.value),
+        hobby: (hobby.value).trim()
+    };
+
     arr.push (persona);
     aggiornaTabella ();
     nome.value ="";
