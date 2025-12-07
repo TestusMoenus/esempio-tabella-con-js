@@ -45,7 +45,8 @@ function aggiornaTabella () {
 }
 
 function aggiungi () {
-    if ((nome.value).trim() =="" || (cognome.value).trim() =="" || eta.value =="" || (hobby.value).trim() =="" || isNaN (Number(eta.value)) || Number(eta.value) <=0 ) {
+    if ((nome.value).trim() =="" || (cognome.value).trim() =="" ||
+     eta.value =="" || (hobby.value).trim() =="" || isNaN (Number(eta.value)) || Number(eta.value) <=0 ) {
         alert ("Compila tutti i campi in modo adeguato");
         return;
     }
@@ -63,6 +64,25 @@ function aggiungi () {
     eta.value ="";
     hobby.value ="";
 }
+
+function rimuovi () {
+    if (arr.length ==0) {
+        alert ("Nessuna riga da rimuovere");
+        return;
+    }
+    arr.pop ();
+    aggiornaTabella ();
+}
+
+function cancellaTutto () {
+    if (arr.length ==0) {
+        alert ("Nessuna riga da rimuovere");
+        return;
+    }   
+    arr = [];
+    aggiornaTabella ();
+}
+
 
 btnAggiungi.addEventListener ("click",aggiungi);
 rimuovi.addEventListener ("click",rimuovi);
