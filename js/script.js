@@ -65,8 +65,8 @@ function aggiungi () {
     hobby.value ="";
 }
 
-function rimuovi () {
-    if (arr.length ==0) {
+function rimuoviFunzione () {
+    if (arr.length == 0) {
         alert ("Nessuna riga da rimuovere");
         return;
     }
@@ -74,7 +74,7 @@ function rimuovi () {
     aggiornaTabella ();
 }
 
-function cancellaTutto () {
+function cancellaTuttoFunction () {
     if (arr.length ==0) {
         alert ("Nessuna riga da rimuovere");
         return;
@@ -85,5 +85,5 @@ function cancellaTutto () {
 
 
 btnAggiungi.addEventListener ("click",aggiungi);
-rimuovi.addEventListener ("click",rimuovi);
-cancellaTutto.addEventListener ("click",cancellaTutto);
+rimuovi.addEventListener ("click",rimuoviFunzione);
+cancellaTutto.addEventListener ("click",cancellaTuttoFunction);
