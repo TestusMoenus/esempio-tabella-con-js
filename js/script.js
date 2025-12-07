@@ -29,7 +29,7 @@ function inizializzaTabella () {
 }
 function aggiornaTabella () {
     inizializzaTabella ();
-
+    let c = 0
     for (let i = 0; i < arr.length; i++) { 
         const riga = document.createElement ("tr");
         const personaCorrente = arr[i];
@@ -37,10 +37,14 @@ function aggiornaTabella () {
 
         for (const key in personaCorrente) { 
             const cella = document.createElement ("td");
-            cella.innerText = personaCorrente[key];
+            if (key == "nome") {
+                cella.innerHTML = `<b>${c + 1}</b>\t${personaCorrente[key]}`;
+            }else{
+            cella.innerText = personaCorrente[key];}
             riga.appendChild (cella);
         }
         tabella.appendChild (riga);
+        c++;
     }
 }
 
