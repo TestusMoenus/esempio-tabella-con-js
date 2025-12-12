@@ -19,9 +19,9 @@ let arr = [
 function inizializzaTabella () {
     tabella.innerHTML ="";
     let header = document.createElement ("tr");
-        
-            for (const key in persona) {
-                const th = document.createElement ("th");
+    
+    for (const key in persona) {
+        const th = document.createElement ("th");
                 th.innerText = key.charAt(0).toUpperCase() + key.slice(1);
                 header.appendChild (th);
             }
