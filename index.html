@@ -12,28 +12,49 @@
     <title>esempio tabella con js</title>
   </head>
   <body>
+    <div class="container border border-3 rounded-3 border-dark">
+      <div class="row">
 
+     
+        <!-- <div class="d-flex flex-row mb-3 justify-content-between">
+          <input type="text" id="nome" placeholder="inserisci nome" class=""/>
+          <input type="text" id="cognome" placeholder="inserisci cognome"/>
+        </div> -->
+        <div class="input-group ">
+          <span class="input-group-text">First and last name</span>
+          <input type="text" id="nome" aria-label="First name" class="form-control">
+          <input type="text" id="cognome" aria-label="Last name" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="d-flex flex-row mb-3 justify-content-between">
+            <span class="input-group-text" id="inputGroup-sizing-default">eta</span>
+            <input type="number" id="eta" placeholder="inserisci eta" min="1" max="100"/>
+          </div>
+        </div>
+        <div class="col">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Hobby</span>
+            <input type="text" id="hobby" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+          </div>
+        </div>
+      </div>
+        <div class="d-block d-flex justify-content-around p-2">
+          <button id="btn-inserisci">inserisci</button>
+          <button id="btn-rimuovi">rimuovi</button>
+          <button id="btn-cancella-tutto">cancella tutto</button>
+        </div>
+      
+    </div>
 
-
-    <div class="container-fluid m-3 p-3 border border-3 rounded-3 border-dark">
-      <span class="text-center">
-        <input type="text" name="" id="nome" placeholder="inserisci nome"/>
-        <input type="text" name="" id="cognome" placeholder="inserisci cognome"/>
-        <input type="number" name="" id="eta" placeholder="inserisci eta" min="1" max="100"/>
-        <input type="text" name="" id="hobby" placeholder="inserisci hobby"/>
-        <button id="btn-inserisci">inserisci</button>
-        <button id="btn-rimuovi">rimuovi</button>
-        <button id="btn-cancella-tutto">cancella tutto</button>
-      </span>
-
-
-
-      <table  class="text-center table table-striped table-hover m-3 p-3">
+    <div class="container mt-3">
+      <table  class="text-center table table-striped table-hover">
         <thead id="header_tabella" class="table-dark">
-
+          
         </thead>
         <tbody id="tabella">
-
+          
         </tbody>
       </table>
     </div>
