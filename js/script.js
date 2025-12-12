@@ -3,6 +3,7 @@ const cognome =document.getElementById ("cognome");
 const eta =document.getElementById ("eta");
 const hobby =document.getElementById ("hobby");
 const tabella =document.getElementById ("tabella");
+const tabella_header =document.getElementById ("header_tabella");
 const btnAggiungi =document.getElementById ("btn-inserisci");
 const rimuovi =document.getElementById ("btn-rimuovi");
 const cancellaTutto =document.getElementById ("btn-cancella-tutto");
@@ -17,21 +18,24 @@ let arr = [
 ];
 
 function inizializzaTabella () {
+    tabella_header.innerHTML ="";
     tabella.innerHTML ="";
     let header = document.createElement ("tr");
-    
+
     for (const key in persona) {
         const th = document.createElement ("th");
-                th.innerText = key.charAt(0).toUpperCase() + key.slice(1);
-                header.appendChild (th);
+            th.innerText = key.charAt(0).toUpperCase() + key.slice(1);
+            header.appendChild (th);
             }
-    tabella.appendChild (header);
+    tabella_header.appendChild (header);
 }
 function aggiornaTabella () {
     inizializzaTabella ();
     let c = 0
     for (let i = 0; i < arr.length; i++) { 
         const riga = document.createElement ("tr");
+        if(i%2==0) riga.classList.toggle("table-info") 
+        else riga.classList.toggle("table-danger")
         const personaCorrente = arr[i];
 
 
