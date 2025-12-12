@@ -87,7 +87,7 @@ function cancellaTuttoFunction () {
     aggiornaTabella ();
 }
 
-
+inizializzaTabella();
 btnAggiungi.addEventListener ("click",aggiungi);
 rimuovi.addEventListener ("click",rimuoviFunzione);
 cancellaTutto.addEventListener ("click",cancellaTuttoFunction);
