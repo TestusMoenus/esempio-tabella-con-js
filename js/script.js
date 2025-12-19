@@ -35,7 +35,7 @@ function aggiornaTabella () {
     for (let i = 0; i < arr.length; i++) { 
         const riga = document.createElement ("tr");
         if(i%2==0) riga.classList.toggle("table-info") 
-        else riga.classList.toggle("table-danger")
+        else riga.classList.toggle("table-warning")
         const personaCorrente = arr[i];
 
 
