@@ -58,6 +58,10 @@ function aggiungi () {
         alert ("Compila tutti i campi in modo adeguato");
         return;
     }
+    if (Number(eta.value) > 120){
+        alert("mettere un'eta inferiore di 120")
+        return
+    }
     persona = {
         nome: (nome.value).trim(),
         cognome: (cognome.value).trim(),
